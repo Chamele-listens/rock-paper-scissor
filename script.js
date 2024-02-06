@@ -32,7 +32,7 @@ function playRound(playerSelect,computerSelection){
 }
 
 function playGame(){
-    for (let i = 0; i <= 5 ; i++){
+    for (let i = 0; i < 5 ; i++){
         console.log(playRound(playerSelect,computerSelection))
     }
 }
