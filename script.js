@@ -6,13 +6,17 @@ function getComputerChoice(){
     return computerPick
 }
 
-let playerSelect = prompt("Pick rock, paper or scissor").toLowerCase();
-let computerSelection = getComputerChoice();
-
-console.log(computerSelection);
-console.log(playerSelect)
+let playerSelect;
+let computerSelection;
 
 function playRound(playerSelect,computerSelection){
+    playerSelect = prompt("Pick rock, paper or scissor").toLowerCase();
+    computerSelection = getComputerChoice();
+
+    console.log(computerSelection);
+    console.log(playerSelect)
+
+
     if (playerSelect == "paper" && computerSelection == "rock"){
         return "You win ! Paper beats rock "
     } else if (playerSelect == "rock" && computerSelection == "scissor"){
