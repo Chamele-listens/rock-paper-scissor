@@ -6,8 +6,15 @@ function getComputerChoice(){
     return computerPick
 }
 
-let playerSelect = document.querySelector("button")
+let playerSelect = document.querySelectorAll("button");
 let computerSelection;
+
+playerSelect.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.value);
+    })
+    
+});
 
 
 
@@ -33,4 +40,4 @@ function playRound(playerSelect,computerSelection){
 }
 
 
-console.log(playRound(playerSelect,computerSelection))
+//console.log(playRound(playerSelect,computerSelection))
