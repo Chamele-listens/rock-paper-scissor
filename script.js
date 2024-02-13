@@ -8,32 +8,33 @@ function getComputerChoice(){
 
 let playerBtn = document.querySelectorAll("button");
 let computerSelection;
-let resultDisplay = document.querySelector("div")
+let itemSelection = document.querySelector("div")
 let winnerDisplay = document.querySelector("p")
 let playerScoreCounter = 0;
 let computerScoreCounter = 0;
+let finalResult;
 
 playerBtn.forEach((playerOptions) => {
     playerOptions.addEventListener("click", () => {
         computerSelection = getComputerChoice();
         let playerSelect = playerOptions.value
-        resultDisplay.textContent = `player: ${playerSelect}, computer: ${computerSelection}`;
+        itemSelection.textContent = `player: ${playerSelect}, computer: ${computerSelection}`;
 
         if (playerSelect == "paper" && computerSelection == "rock"){
-            winnerDisplay.textContent = "You win ! Paper beats rock ";
             playerScoreCounter++
+            winnerDisplay.textContent = `Player score: ${playerScoreCounter}, Computer score: ${computerScoreCounter}`;
         } else if (playerSelect == "rock" && computerSelection == "scissor"){
-            winnerDisplay.textContent = "You win ! Rock beats scissor";
             playerScoreCounter++
+            winnerDisplay.textContent = `Player score: ${playerScoreCounter}, Computer score: ${computerScoreCounter}`;
         } else if (playerSelect == "scissor" && computerSelection == "paper"){
-            winnerDisplay.textContent = "You win ! Scissor beats paper";
             playerScoreCounter++
+            winnerDisplay.textContent = `Player score: ${playerScoreCounter}, Computer score: ${computerScoreCounter}`;
         }else if (playerSelect == computerSelection){
-            winnerDisplay.textContent = "It's a tie !";
+            winnerDisplay.textContent = `Player score: ${playerScoreCounter}, Computer score: ${computerScoreCounter}`;
         }
         else{
-            winnerDisplay.textContent = `You lose. ${computerSelection} beats ${playerSelect}`;
             computerScoreCounter++
+            winnerDisplay.textContent = `Player score: ${playerScoreCounter}, Computer score: ${computerScoreCounter}`;
         }
         console.log(`Player score: ${playerScoreCounter}, Computer score: ${computerScoreCounter}`)
     })
