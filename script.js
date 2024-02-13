@@ -53,18 +53,3 @@ playerBtn.forEach((playerOptions) => {
     })
     
 });
-
-
-
-function playRound(playerSelect,computerSelection){
-    playerSelect = prompt("Pick rock, paper or scissor").toLowerCase();
-    computerSelection = getComputerChoice();
-
-    console.log(computerSelection);
-    console.log(playerSelect)
-
-    
-}
-
-
-//console.log(playRound(playerSelect,computerSelection))
