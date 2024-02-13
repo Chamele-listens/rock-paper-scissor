@@ -9,8 +9,7 @@ function getComputerChoice(){
 let playerBtn = document.querySelectorAll("button");
 let computerSelection;
 let resultDisplay = document.querySelector("div")
-let winnerDisplay = document.createElement("p")
-resultDisplay.appendChild(winnerDisplay)
+let winnerDisplay = document.querySelector("p")
 
 playerBtn.forEach((playerOptions) => {
     playerOptions.addEventListener("click", () => {
@@ -19,16 +18,16 @@ playerBtn.forEach((playerOptions) => {
         resultDisplay.textContent = `player: ${playerSelect}, computer: ${computerSelection}`;
 
         if (playerSelect == "paper" && computerSelection == "rock"){
-            return "You win ! Paper beats rock "
+            winnerDisplay.textContent = "You win ! Paper beats rock ";
         } else if (playerSelect == "rock" && computerSelection == "scissor"){
-            return "You win ! Rock beats scissor"
+            winnerDisplay.textContent = "You win ! Rock beats scissor";
         } else if (playerSelect == "scissor" && computerSelection == "paper"){
-            return "You win ! Scissor beats paper"
+            winnerDisplay.textContent = "You win ! Scissor beats paper";
         }else if (playerSelect == computerSelection){
-            return "It's a tie !"
+            winnerDisplay.textContent = "It's a tie !";
         }
         else{
-            return `You lose. ${computerSelection} beats ${playerSelect}`
+            winnerDisplay.textContent = `You lose. ${computerSelection} beats ${playerSelect}`;
         }
     })
     
