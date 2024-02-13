@@ -6,8 +6,10 @@ function getComputerChoice(){
     return computerPick
 }
 
-let playerSelect;
+let playerSelect = document.querySelector("button")
 let computerSelection;
+
+
 
 function playRound(playerSelect,computerSelection){
     playerSelect = prompt("Pick rock, paper or scissor").toLowerCase();
